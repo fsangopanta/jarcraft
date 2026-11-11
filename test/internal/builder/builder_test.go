@@ -35,7 +35,6 @@ func TestCreateMavenCommandWithWindowsWrapper(t *testing.T) {
 		t.Fatalf("expected 3 arguments, got %d", len(command.Args))
 	}
 
-
 }
 
 func TestCreateGradleCommandWithUnixWrapper(t *testing.T) {
@@ -55,10 +54,10 @@ func TestCreateGradleCommandWithUnixWrapper(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	expected := "\\projects\\inventory\\gradlew"
+	expectedWrapper := filepath.Join("/projects/inventory", "gradlew")
 
-	if command.Name != expected {
-		t.Errorf("expected %s, got %s", expected, command.Name)
+	if command.Name != expectedWrapper {
+		t.Errorf("expected %s, got %s", expectedWrapper, command.Name)
 	}
 
 	if len(command.Args) != 2 ||
