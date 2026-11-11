@@ -1,0 +1,34 @@
+build:
+  output: "./builds"
+  parallel: false
+  fail_fast: false
+
+scanner:
+  exclude:
+    - ".git"
+    - ".idea"
+    - ".gradle"
+    - "node_modules"
+
+defaults:
+  skip_tests: true
+  java_version: "25"
+
+projects:
+  project2:
+    skip_tests: true
+    java_version: "25"
+
+  project:
+    skip_tests: false
+    java_version: "21"
+
+logging:
+  level: "info"
+
+
+java:
+  installations:
+    "17": "path:17"
+    "21": "path:21"
+    "25": "path:25"
