@@ -114,7 +114,7 @@ projects:
 
 java:
   installations:
-    "25": "C:\\Users\\fern4\\.jdks\\ms-25.0.4.1"
+    "25": "pathTo25"
 
 logging:
   level: "info"
@@ -148,7 +148,7 @@ defaults:
   java_version: "25"
 
 projects:
-  backend/SpringBootForKafka:
+  project1:
     skip_tests: false
     java_version: "25"
 ```
@@ -177,9 +177,9 @@ JarCraft permite registrar diferentes instalaciones de JDK:
 ```yaml
 java:
   installations:
-    "17": "C:\\Java\\jdk-17"
-    "21": "C:\\Java\\jdk-21"
-    "25": "C:\\Users\\fern4\\.jdks\\ms-25.0.4.1"
+    "17": "pathTo17"
+    "21": "pathTo21"
+    "25": "pathTo25"
 ```
 
 Cuando se solicita una versión específica, JarCraft busca una instalación compatible.
