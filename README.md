@@ -57,7 +57,7 @@ Puedes ejecutar JarCraft directamente desde PowerShell.
 Para escanear y compilar todos los proyectos Java encontrados dentro de un directorio:
 
 ```powershell
-.\jarcraft.exe build --path "C:\Users\fern4\Documents\projects"
+.\jarcraft.exe build --path "C::pathToProjects"
 ```
 
 JarCraft detectará los proyectos compatibles y ejecutará el proceso de compilación correspondiente.
@@ -65,19 +65,19 @@ JarCraft detectará los proyectos compatibles y ejecutará el proceso de compila
 ### Omitir los tests
 
 ```powershell
-.\jarcraft.exe build --path "C:\Users\fern4\Documents\projects" --skip-tests
+.\jarcraft.exe build --path "C::pathToProjects" --skip-tests
 ```
 
 ### Seleccionar una versión de Java
 
 ```powershell
-.\jarcraft.exe build --path "C:\Users\fern4\Documents\projects" --java-version 25
+.\jarcraft.exe build --path "C::pathToProjects" --java-version 25
 ```
 
 ### Utilizar otro archivo de configuración
 
 ```powershell
-.\jarcraft.exe build --path "C:\Users\fern4\Documents\projects" --config "C:\Users\fern4\Downloads\jarcraft.yaml"
+.\jarcraft.exe build --path "C::pathToProjects" --config "C:\oathToConfig\jarcraft.yaml"
 ```
 
 Los parámetros CLI tienen prioridad sobre la configuración del archivo YAML.
